@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poe.tasks]
 process_data = "python3 -m src.data.process_data"
 serve = "uvicorn src.serve.main:app --reload"
+validate = "python3 -m src.validation.validate"
 
 [tool.poetry.dependencies]
 python = "^3.12"
