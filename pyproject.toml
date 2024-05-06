@@ -9,6 +9,7 @@ readme = "README.md"
 process_data = "python3 -m src.data.process_data"
 serve = "uvicorn src.serve.main:app --reload"
 validate = "python3 -m src.validation.validate"
+data_drift = "python3 -m src.validation.data_drift"
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -17,6 +18,7 @@ scikit-learn = "^1.4.2"
 great-expectations = "^0.18.13"
 fastapi = "^0.110.0"
 uvicorn = {extras = ["standard"], version = "^0.28.0"}
+evidently = "^0.4.20"
 
 
 [build-system]
