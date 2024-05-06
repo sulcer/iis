@@ -29,3 +29,10 @@ poetry run poe data_drift
 Comment:
 Nisem zaznal nobenega znatnega odstopanja podatkov v nobenem od stolpcev, glede na podane p-vrednosti. To pomeni, da ni prišlo do opaznih sprememb ali premikov v statističnih lastnostih nabora podatkov glede na teste, ki so se izvedli.
 Ker ni bilo zaznano nobeno odstopanje, kaže, da porazdelitev podatkov ostaja stabilna v času glede na kriterije in pragove.
+
+## Train
+To train the model, run the following command:
+
+```shell
+poetry run poe train
+```
