@@ -1,3 +1,4 @@
+import joblib
 from fastapi import APIRouter
 
 router = APIRouter(
@@ -9,4 +10,7 @@ router = APIRouter(
 
 @router.post("/predict")
 def predict(data):
-    return data
+    model = joblib.load("models/model.joblib")
+    prediction = model.predict(data)
+
+    return prediction
