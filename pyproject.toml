@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "iis-exam"
+version = "0.1.0"
+description = ""
+authors = ["sulcer <gregor.sulcer@student.um.si>"]
+readme = "README.md"
+
+[tool.poe.tasks]
+process_data = "python3 -m src.data.process_data"
+serve = "uvicorn src.serve.main:app --reload"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+scikit-learn = "^1.4.2"
+great-expectations = "^0.18.13"
+fastapi = "^0.110.0"
+uvicorn = {extras = ["standard"], version = "^0.28.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
